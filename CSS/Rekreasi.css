@@ -1,0 +1,70 @@
+/*title*/
+.Title1 {
+	font-size: 23px; 
+	margin-top: 50px;
+	margin-left: 10px;
+}
+.Title2 {
+    font-size: 20px; 
+    font-weight: bold;
+    padding: 10px;
+}
+
+.locate {
+    float: right;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.item1 { grid-area: One; }
+.item2 { grid-area: Two; }
+.item3 { grid-area: Three; }
+
+.content-container {
+  display: grid;
+  grid-template-areas:
+    'One One'
+    'Two Three';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.content-container > div {
+	border: 2px solid #ddd;
+	background-color: white;
+}
+
+.item1 img{
+    width: 300px;
+    float: left;
+    padding: 0px 10px 10px 10px;
+}
+.item2 img, .item3 img{
+    width: 210px;
+    float: left;
+    padding: 0px 10px 10px 10px;
+}
+button {
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+
+
+@media all and (max-width: 1100px) {
+
+}
+
+@media all and (max-width: 600px) {
+    .topnav a:not(:nth-child(2)) {display: none;}
+    .content-container {
+        grid-template-areas: 
+        'One'
+        'Two'
+        'Three';
+    }
+    .item1 img, .item2 img, .item3 img {
+        width: 160px;
+    }
+    
+}

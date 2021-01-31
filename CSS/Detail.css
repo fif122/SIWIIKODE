@@ -1,0 +1,97 @@
+/*title*/
+.Title1 {
+	font-size: 23px; 
+	margin-top: 70px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.Title2 {
+    font-size: 20px; 
+}
+
+.locate {
+    float: right;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+/*Gallery*/
+.Title-gallery {
+	font-size: 20px; 
+	margin-left: 120px;
+}
+
+.gallery-container {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: auto auto auto auto auto auto;
+	padding: 10px;
+}
+
+.gallery-item img{
+	width: 100%;
+}
+
+
+/* Deskripsi dan Map*/
+.item1 { grid-area: One; }
+.item2 { grid-area: Two; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'One One One Two Two'
+    'Footer Footer Footer Footer Footer';
+  grid-gap: 10px;
+}
+
+.grid-container > div {
+	border: 2px solid #ddd;
+	background-color: white;
+	padding: 10px;
+}
+
+/*Testimony*/
+.testimony-container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: auto auto auto;
+	padding: 10px;	
+}
+.testimony-container > div {
+	border: 2px solid #ddd;
+	padding: 10px;
+}
+.testimony-item img{
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+
+
+@media all and (max-width: 1100px) {
+	.gallery-container {
+		grid-template-columns: auto auto  auto;
+	}
+	.Title-gallery {
+		margin-left: 10px;
+	}
+	.testimony-item img{
+		width: 70px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.topnav a:not(:nth-child(2)) {display: none;}
+	/*Deskripsi & Map*/
+	.grid-container {
+		grid-template-areas:
+		  'One'
+		  'Two'
+		  'Footer';
+	  }
+	  
+	  .testimony-container {
+		  grid-template-columns: auto;
+	  }
+}
